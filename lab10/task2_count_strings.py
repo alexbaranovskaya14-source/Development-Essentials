@@ -1,7 +1,7 @@
 """Count str in the list items."""
+
 items = [list, "abba", "123", 123, "list", None, True, ["x"]] 
-count = 0
-for item in items:
-    if isinstance(item, str):
-        count += 1
-print(f"Number of strings: {count}")        
+
+
+checks = [isinstance(item, str) for item in items]
+print(f"Number of strings: {checks.count(True)}") 
